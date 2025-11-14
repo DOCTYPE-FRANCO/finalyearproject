@@ -3,7 +3,7 @@ import Logo from "../assets/SE-logo.png"
 
 function Header() {
     return(
-        <div className="flex items-center justify-between top-4 fixed w-[80vw] h-[50px] bg-gray-600/10 z-50 left-1/2 transform -translate-x-1/2 rounded-2xl">
+        <div className="flex items-center justify-between top-4 fixed w-[80vw] h-[50px] bg-gray-600/10 z-50 left-1/2 transform -translate-x-1/2 rounded-2xl backdrop-blur-sm">
             <div className="ml-4">
                 <img src={Logo} className="w-[65px]" />
             </div>
