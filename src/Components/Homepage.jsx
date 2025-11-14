@@ -2,7 +2,7 @@ import React from "react";
 import Herosection from "./Herosection";
 function Homepage() {
     return(
-        <div>
+        <div className="pt-26">
             <Herosection />
         </div>
     );
