@@ -9,7 +9,7 @@ function Herosection (){
 
             <div className="flex justify-center pt-6">
                 <button className="w-[130px] h-[45px] bg-blue-600 rounded-sm text-white">GET STARTED</button>
-                <button className="w-[130px] h-[45px] border border-blue-600 rounded-sm text-blue-600"></button>
+                <button className="w-[130px] h-[45px] border border-blue-600 rounded-sm text-blue-600">LEARN MORE</button>
             </div>
         </div>
     );
