@@ -8,7 +8,7 @@ function Homepage() {
         <div className="pt-26">
             <Herosection />
 
-            <div className="flex md:flex-row pl-10 mt-10">
+            <div className="flex justify-center gap-16 md:flex-row  mt-24">
                 <div className="flex flex-col gap-5 justify-center items-center shadow-2xl shadow-gray-700 w-[200px] h-[200px] rounded-md">
                     <img src={Secure} className="w-[100px]"/>
                     <p className="font-bold">Secure Digital Voting</p>
