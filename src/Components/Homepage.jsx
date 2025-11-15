@@ -27,7 +27,13 @@ function Homepage() {
 
             <h1 className="text-4xl flex justify-center mt-20">HOW IT WORKS</h1>
 
-            <div></div>
+            <div>
+                <div>
+                    <div>
+                        <div className="text-white bg-blue-600 w-[60px] h-[60px] rounded-full">1</div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 
