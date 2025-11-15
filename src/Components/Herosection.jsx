@@ -8,7 +8,7 @@ function Herosection (){
             </div>
 
             <div className="flex justify-center pt-6 gap-4">
-                <button className="w-[170px] h-[45px] bg-blue-600 rounded-sm text-white">GET STARTED</button>
+                <button className="w-[170px] h-[45px] bg-blue-600 rounded-sm text-white hover:scale-110 transition-all duration-300">GET STARTED</button>
                 <button className="w-[170px] h-[45px] border border-blue-600 rounded-sm text-blue-600">LEARN MORE</button>
             </div>
         </div>
