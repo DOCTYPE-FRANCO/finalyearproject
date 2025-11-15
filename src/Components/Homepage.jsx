@@ -24,6 +24,10 @@ function Homepage() {
                     <p className="font-bold">Multi-Level Access</p>
                 </div>
             </div>
+
+            <h1 className="text-4xl flex justify-center mt-20">HOW IT WORKS</h1>
+
+            <div></div>
         </div>
     );
 
