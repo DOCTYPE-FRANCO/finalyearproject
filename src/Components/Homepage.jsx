@@ -28,8 +28,8 @@ function Homepage() {
             <h1 className="text-4xl flex justify-center mt-20">HOW IT WORKS</h1>
 
             <div>
-                <div>
-                    <div className="w-[250px] h-[250px] bg-white flex items-center justify-center">
+                <div className="">
+                    <div className="w-[250px] h-[250px] bg-white flex items-center justify-center shadow-2xl shadow-gray-400 ">
                         <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">1</div>
                     </div>
                 </div>
