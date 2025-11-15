@@ -25,7 +25,7 @@ function Homepage() {
                 </div>
             </div>
 
-            <h1 className="text-4xl flex justify-center mt-20">HOW IT WORKS</h1>
+            <h1 className="text-4xl flex justify-center mt-26">HOW IT WORKS</h1>
 
             <div>
                 <div className="flex md:flex-row justify-center gap-5 mt-10">
