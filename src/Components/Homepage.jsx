@@ -27,7 +27,7 @@ function Homepage() {
             <motion.div 
                 initial={{opacity: 0, y: -75}}
                 animate={{opacity: 1, y: 0, transition:{duration:1}}}
-                className="flex flex-col justify-center gap-16 md:flex-row  mt-24 "
+                className="flex flex-col justify-center items-center gap-16 md:flex-row mt-24 "
             >
                 <div className="flex flex-col gap-5 justify-center items-center shadow-2xl shadow-gray-700 w-[200px] h-[170px] rounded-md">
                     <img src={Secure} className="w-[70px]"/>
@@ -57,7 +57,7 @@ function Homepage() {
                     hidden:{opacity: 0},
                     visible:{opacity: 1, transition: {staggerChildren: 0.5}}
                 }}
-                className="flex md:flex-row justify-center gap-5 mt-10"
+                className="flex flex-col items-center md:flex-row justify-center gap-5 mt-10"
             >
                 <motion.div
                     variants={variants1} 
