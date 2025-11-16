@@ -29,7 +29,9 @@ function Homepage() {
             <h1 className="text-4xl flex justify-center mt-26">HOW IT WORKS</h1>
 
             
-            <motion.div className="flex md:flex-row justify-center gap-5 mt-10">
+            <motion.div
+                className="flex md:flex-row justify-center gap-5 mt-10"
+            >
                 <div className="w-[250px] h-[250px] bg-white flex flex-col justify-start gap-5 pt-6 items-center shadow-2xl shadow-gray-400 rounded-md">
                     <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">1</div>
                     <p className="text-2xl font-bold">Create Election</p>
