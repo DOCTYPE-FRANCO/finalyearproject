@@ -24,7 +24,11 @@ function Homepage() {
         <div className="pt-26">
             <Herosection />
 
-            <div className="flex justify-center gap-16 md:flex-row  mt-24">
+            <motion.div 
+                initial={{opacity: 0, y: -75}}
+                animate={{opacity: 1, y: 0, transition:{duration:1}}}
+                className="flex flex-col justify-center gap-16 md:flex-row  mt-24 "
+            >
                 <div className="flex flex-col gap-5 justify-center items-center shadow-2xl shadow-gray-700 w-[200px] h-[170px] rounded-md">
                     <img src={Secure} className="w-[70px]"/>
                     <p className="font-bold">Secure Digital Voting</p>
@@ -39,7 +43,7 @@ function Homepage() {
                     <img src={Access} className="w-[70px]"/>
                     <p className="font-bold">Multi-Level Access</p>
                 </div>
-            </div>
+            </motion.div>
 
             <h1 className="text-4xl flex justify-center mt-26">HOW IT WORKS</h1>
 
@@ -70,7 +74,7 @@ function Homepage() {
                 >
                     <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">2</div>
                     <p className="text-2xl font-bold">Verify Voters</p>
-                    <p className="text-center text-sm font-thin">A form of Identification must be provided e.d ID cards</p>
+                    <p className="text-center text-sm font-thin  max-w-[80%]">A form of Identification must be provided e.d ID cards</p>
                 </motion.div>
 
                 <motion.div 
@@ -79,7 +83,7 @@ function Homepage() {
                 >
                     <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">3</div>
                     <p className="text-2xl font-bold">Cast Vote Securely</p>
-                    <p className="text-center text-sm font-thin w-[95vw]">Voters cast their vote securely</p>
+                    <p className="text-center text-sm font-thin ">Voters cast their vote securely</p>
                 </motion.div>
 
                 <motion.div 
