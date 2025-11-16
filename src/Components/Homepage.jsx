@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import Robot from "../assets/robot.svg"
 import Access from "../assets/Access.svg"
 import Secure from "../assets/secure.svg"
 import Herosection from "./Herosection";
+import { motion, useInView, useAnimation } from "framer-motion";
 function Homepage() {
     return(
         <div className="pt-26">
