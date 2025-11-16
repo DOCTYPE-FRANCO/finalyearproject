@@ -47,7 +47,7 @@ function Homepage() {
                         <p className="text-center text-sm font-thin">Voters cast their vote securely</p>
                     </div>
 
-                     <div className="w-[250px] h-[250px] bg-white flex flex-col items-center justify-center shadow-2xl shadow-gray-400 rounded-md">
+                    <div className="w-[250px] h-[250px] bg-white flex flex-col items-center justify-center shadow-2xl shadow-gray-400 rounded-md">
                         <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">4</div>
                         <p className="text-2xl font-bold">Auto Generated Results</p>
                         <p className="text-center text-sm font-thin">At the end of the votting session, the results are automatically collated </p>
