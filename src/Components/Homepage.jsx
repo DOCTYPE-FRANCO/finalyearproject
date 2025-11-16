@@ -45,6 +45,7 @@ function Homepage() {
 
             
             <motion.div
+                id="How"
                 ref={ref}
                 initial = "hidden"
                 animate = {mainControls}
