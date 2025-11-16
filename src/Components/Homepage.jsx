@@ -29,28 +29,28 @@ function Homepage() {
 
             <div>
                 <div className="flex md:flex-row justify-center gap-5 mt-10">
-                    <div className="w-[250px] h-[250px] bg-white flex flex-col items-center justify-center shadow-2xl shadow-gray-400 rounded-md">
+                    <div className="w-[250px] h-[250px] bg-white flex flex-col justify-start gap-5 pt-6 items-center shadow-2xl shadow-gray-400 rounded-md">
                         <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">1</div>
                         <p className="text-2xl font-bold">Create Election</p>
                         <p className="text-center text-sm font-thin">Admin sets positions, candidates, and timelines</p>
                     </div>
 
-                     <div className="w-[250px] h-[250px] bg-white flex flex-col items-center justify-center shadow-2xl shadow-gray-400 rounded-md">
+                     <div className="w-[250px] h-[250px] bg-white flex flex-col justify-start gap-5 pt-6 items-center shadow-2xl shadow-gray-400 rounded-md">
                         <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">2</div>
                         <p className="text-2xl font-bold">Verify Voters</p>
                         <p className="text-center text-sm font-thin">A form of Identification must be provided e.d ID cards</p>
                     </div>
 
-                     <div className="w-[250px] h-[250px] bg-white flex flex-col items-center justify-center shadow-2xl shadow-gray-400 rounded-md">
+                     <div className="w-[250px] h-[250px] bg-white flex flex-col justify-start gap-5 pt-6 items-center shadow-2xl shadow-gray-400 rounded-md">
                         <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">3</div>
                         <p className="text-2xl font-bold">Cast Vote Securely</p>
                         <p className="text-center text-sm font-thin">Voters cast their vote securely</p>
                     </div>
 
-                    <div className="w-[250px] h-[250px] bg-white flex flex-col items-center justify-center shadow-2xl shadow-gray-400 rounded-md">
+                    <div className="w-[250px] h-[250px] bg-white flex flex-col justify-start gap-5 pt-6 items-center shadow-2xl shadow-gray-400 rounded-md">
                         <div className="flex justify-center items-center text-2xl text-white bg-blue-600 w-[60px] h-[60px] rounded-full">4</div>
-                        <p className="text-2xl font-bold">Auto Generated Results</p>
-                        <p className="text-center text-sm font-thin">At the end of the votting session, the results are automatically collated </p>
+                        <p className="text-2xl text-center font-bold">Auto Generated Results</p>
+                        <p className="text-center text-sm font-thin">At the end of the voting session, the results are automatically collated </p>
                     </div>
                 </div>
             </div>
