@@ -4,6 +4,7 @@ import React from "react";
 function Election() {
     return(
         <div>
+            <p className="text-center font-extrabold text-blue-600 text-3xl mt-20">CREATE NEW ELECTION OR SELECT AN EXISTING TEMPLATE</p>
             <div className="mt-20 grid md:grid-cols-3 pl-20">
                 <div className="flex flex-col gap-5 justify-center items-center w-[270px] h-[200px] shadow-gray-400 shadow-2xl rounded-md">
                     <p className="font-extrabold text-blue-600 text-2xl">CREATE ELECTION</p>
