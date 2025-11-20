@@ -3,10 +3,10 @@ import { Church, PlusCircle, School, School2 } from "lucide-react";
 
 
 function Election() {
-    const [create, setCreate ] = useState(false);
-    const [facussa, setFacussa ] = useState(false);
-    const [acc, setAcc ] = useState(false);
-    const [altar, setAltar ] = useState(false);
+    const [create, setCreate] = useState(false);
+    const [facussa, setFacussa] = useState(false);
+    const [acc, setAcc] = useState(false);
+    const [altar, setAltar] = useState(false);
     
     return(
         <div className="flex flex-col justify-center items-center">
