@@ -1,7 +1,13 @@
+import React, {useState} from "react";
 import { Church, PlusCircle, School, School2 } from "lucide-react";
-import React from "react";
+
 
 function Election() {
+    const [create, setCreate ] = useState(false);
+    const [facussa, setFacussa ] = useState(false);
+    const [acc, setAcc ] = useState(false);
+    const [altar, setAltar ] = useState(false);
+    
     return(
         <div className="flex flex-col justify-center items-center">
             <p className="text-center font-extrabold text-blue-600 text-3xl mt-20">Create a New Election or Choose a Template</p>
