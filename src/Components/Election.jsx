@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import { Church, PlusCircle, School, School2 } from "lucide-react";
+import { Church, PlusCircle, School, School2, XCircle, XIcon } from "lucide-react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 
 function Election() {
-    const [create, setCreate] = useState(false);
+    const [create, setCreate] = useState(true);
     const [facussa, setFacussa] = useState(false);
     const [acc, setAcc] = useState(false);
     const [altar, setAltar] = useState(false);
@@ -33,7 +33,14 @@ function Election() {
                 </div>
             </div>
 
-
+            {create && (
+                <div className="fixed top-20 rounded-md w-[80vw] h-[80vh] bg-gray-200">
+                    <div>
+                        <p>Create Election</p>
+                        <XCircle />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
