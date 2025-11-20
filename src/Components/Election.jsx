@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Church, PlusCircle, School, School2 } from "lucide-react";
-
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 
 function Election() {
     const [create, setCreate] = useState(false);
@@ -32,6 +32,8 @@ function Election() {
                     <p className="font-bold text-blue-600 text-center text-2xl">ALTAR SERVERS ELECTIONS</p>   
                 </div>
             </div>
+
+
         </div>
     );
 }
