@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function Herosection (){
     return(
         <div>
@@ -8,7 +9,9 @@ function Herosection (){
             </div>
 
             <div className="flex justify-center pt-6 gap-4">
-                <button className="w-[170px] h-[45px] bg-blue-600 rounded-sm text-white hover:scale-110 transition-all duration-300">GET STARTED</button>
+                <Link to="/election">
+                    <button className="w-[170px] h-[45px] bg-blue-600 rounded-sm text-white hover:scale-110 transition-all duration-300">GET STARTED</button>
+                </Link>
                 <a href="#How" className="flex justify-center items-center w-[170px] h-[45px] border border-blue-600 rounded-sm text-blue-600 hover:bg-blue-600 transition-all duration-1000 hover:text-white">LEARN MORE</a>
             </div>
         </div>
