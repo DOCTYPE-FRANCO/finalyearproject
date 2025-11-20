@@ -17,17 +17,17 @@ function Election() {
                     <p className="font-bold text-blue-600 text-2xl">CREATE ELECTION</p>   
                 </div>
 
-                <div className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
+                <div onClick={() => setFacussa(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
                     <School  color="#2563EB" size={54}/>
                     <p className="font-bold text-blue-600 text-2xl">FACUSSA ELECTIONS</p>     
                 </div>
 
-                <div className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
+                <div onClick={() => setAcc(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
                     <School2  color="#2563EB" size={54}/>
                     <p className="font-bold text-blue-600 text-center text-2xl">ACCOUNTING ELECTIONS</p>   
                 </div>
 
-                <div className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
+                <div onClick={() => setAltar(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
                     <Church  color="#2563EB" size={54}/>
                     <p className="font-bold text-blue-600 text-center text-2xl">ALTAR SERVERS ELECTIONS</p>   
                 </div>
