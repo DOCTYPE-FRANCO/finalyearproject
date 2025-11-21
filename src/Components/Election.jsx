@@ -61,16 +61,57 @@ function Election() {
                             <X onClick={() => setCreate(false)}/>
                         </div>
 
-                        <form className="px-5">
+                        <form className="px-5 flex flex-col gap-3">
                             <label className="flex flex-col gap-2 text-2xl">
                                 Election Title
                                 <input 
                                     type="text"
                                     name="electionTitle"
                                     value={createForm.electionTitle}
-                                    
-                                    className="w-[350px] h-[30px] bg-white"
+                                    onChange={handleChange}
+                                    className="w-[450px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                 />
+                            </label>
+
+                            <label className="flex flex-col gap-2 text-2xl">
+                                Position
+                                <input 
+                                    type="text"
+                                    name="electionTitle"
+                                    value={createForm.electionTitle}
+                                    onChange={handleChange}
+                                    className="rounded-md w-[350px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                />
+
+                                <div className="grid grid-cols-2 gap-2 w-[550px]">
+                                    <input 
+                                        type="text"
+                                        onChange={handleChange}
+                                        placeholder="Candidates Name"
+                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    />
+
+                                    <input 
+                                        type="text"
+                                        onChange={handleChange}
+                                        placeholder="Candidates Name"
+                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    />
+
+                                    <input 
+                                        type="text"
+                                        onChange={handleChange}
+                                        placeholder="Candidates Name"
+                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    />
+
+                                    <input 
+                                        type="text"
+                                        onChange={handleChange}
+                                        placeholder="Candidates Name"
+                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    />
+                                </div>
                             </label>
                         </form>
                     </motion.div>
