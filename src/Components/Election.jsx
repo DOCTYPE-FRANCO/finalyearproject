@@ -7,6 +7,19 @@ function Election() {
     const [facussa, setFacussa] = useState(false);
     const [acc, setAcc] = useState(false);
     const [altar, setAltar] = useState(false);
+
+    const [createForm, setCreateForm] = useState({
+        electionTitle: "",
+
+    });
+
+    function handleChange(e){
+        const {name, value} = e.target;
+        setCreateForm(prev => ({
+            ...prev,
+            [name] : value
+        }));
+    }
     
     return(
         <div className="flex flex-col justify-center items-center">
@@ -33,21 +46,36 @@ function Election() {
                 </div>
             </div>
 
-            {create && (
-                <div className="fixed top-20 rounded-md w-[80vw] h-[80vh] bg-blue-600/20 backdrop-blur-sm">
-                    <div className="flex  justify-between px-5 pt-1 pb-2">
-                        <p className="text-2xl font-extrabold">CREATE ELECTION</p>
-                        <X onClick={() => setCreate(false)}/>
-                    </div>
+            <AnimatePresence >
 
-                    <form>
-                        <label>
-                            Election Title
-                            <input type="text"/>
-                        </label>
-                    </form>
-                </div>
-            )}
+                {create && (
+                    <motion.div 
+                        initial={{opacity: 0, y: -75}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.4}}
+                        exit={{opacity: 0, y: 75}}
+                        className="fixed top-20 rounded-md w-[80vw] h-[80vh] bg-blue-600/20 backdrop-blur-sm"
+                    >
+                        <div className="flex  justify-between px-5 pt-1 pb-5">
+                            <p className="text-3xl font-extrabold">CREATE ELECTION</p>
+                            <X onClick={() => setCreate(false)}/>
+                        </div>
+
+                        <form className="px-5">
+                            <label className="flex flex-col gap-2 text-2xl">
+                                Election Title
+                                <input 
+                                    type="text"
+                                    name="electionTitle"
+                                    value={createForm.electionTitle}
+                                    
+                                    className="w-[350px] h-[30px] bg-white"
+                                />
+                            </label>
+                        </form>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
