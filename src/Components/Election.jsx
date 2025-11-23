@@ -117,7 +117,7 @@ function Election() {
                                         placeholder="Position Name"
                                         value={pos.positionName}
                                         onChange={(e) => handlePositionChange(e, posIndex)}
-                                        className="w-[300px] h-[30px] mb-3 bg-white text-center focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="ml-10 w-[300px] h-[30px] mb-3 bg-white text-center focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
                                     <div className="grid grid-cols-2 gap-2 w-[400px]">
