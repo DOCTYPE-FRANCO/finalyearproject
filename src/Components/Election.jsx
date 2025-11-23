@@ -57,12 +57,12 @@ function Election() {
                         className="fixed top-20 rounded-md w-[80vw] h-[80vh] bg-blue-600/20 backdrop-blur-sm"
                     >
                         <div className="flex  justify-between px-5 pt-1 pb-5">
-                            <p className="text-3xl font-extrabold">CREATE ELECTION</p>
+                            <p className="text-2xl font-extrabold">CREATE ELECTION</p>
                             <X onClick={() => setCreate(false)}/>
                         </div>
 
                         <form className="px-5 flex flex-col gap-3">
-                            <label className="flex flex-col gap-2 text-2xl">
+                            <label className="flex flex-col gap-2 ">
                                 Election Title
                                 <input 
                                     type="text"
@@ -73,14 +73,14 @@ function Election() {
                                 />
                             </label>
 
-                            <label className="flex flex-col gap-2 text-2xl">
+                            <label className="flex flex-col gap-2">
                                 Position
                                 <input 
                                     type="text"
                                     name="electionTitle"
                                     value={createForm.electionTitle}
                                     onChange={handleChange}
-                                    className="rounded-md w-[350px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    className="rounded-md w-[350px] h-[30px]  text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                 />
 
                                 <div className="grid grid-cols-2 gap-2 w-[550px]">
@@ -88,28 +88,28 @@ function Election() {
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
                                     <input 
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
                                     <input 
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
                                     <input 
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
                                 </div>
                             </label>

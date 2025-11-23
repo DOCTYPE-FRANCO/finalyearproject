@@ -21,7 +21,7 @@ function Homepage() {
     }, [isinView]);
 
     return(
-        <div className="pt-26">
+        <div className="md:pt-32 pt-26">
             <Herosection />
 
             <motion.div 
