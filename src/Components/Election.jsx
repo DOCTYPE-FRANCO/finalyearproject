@@ -96,7 +96,7 @@ function Election() {
                         </div>
 
                         <form className="px-5 flex flex-col gap-3">
-                            <label className="flex flex-col gap-2 text-2xl ">
+                            <label className="flex flex-col gap-2 text-2xl mb-10">
                                 Election Title
                                 <input 
                                     type="text"
