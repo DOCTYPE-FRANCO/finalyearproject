@@ -28,7 +28,19 @@ function Election() {
             [name] : value
         }));
     }
-    
+
+    function addPosition() {
+        setPositions([...positions, { positionName: "", candidates: [""] }]);
+    };
+
+    function addCandidate(posIndex) {
+        const updated = [...positions];
+        updated[posIndex].candidates.push("");
+        setPositions(updated);
+    };
+
+
+        
     return(
         <div className="flex flex-col justify-center items-center">
             <p className="text-center font-extrabold text-blue-600 text-3xl mt-20">Create a New Election or Choose a Template</p>
@@ -122,7 +134,7 @@ function Election() {
                                 </div>
                             </label>
                         </form>
-                        
+
                         {positions.map((pos, posIndex) => (
                             <div key={posIndex} className="border p-4 rounded-md mb-5">
 
