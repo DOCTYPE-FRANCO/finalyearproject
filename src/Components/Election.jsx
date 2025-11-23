@@ -26,23 +26,23 @@ function Election() {
             <p className="text-center font-extrabold text-blue-600 text-3xl mt-20">Create a New Election or Choose a Template</p>
             <div className="grid md:grid-cols-2 gap-10 pt-16">
                 <div onClick={() => setCreate(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
-                    <PlusCircle  color="#2563EB" size={54}/>
-                    <p className="font-bold text-blue-600 text-2xl">CREATE ELECTION</p>   
+                    <PlusCircle  color="#2563EB" size={34}/>
+                    <p className="font-bold text-blue-600">CREATE ELECTION</p>   
                 </div>
 
                 <div onClick={() => setFacussa(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
-                    <School  color="#2563EB" size={54}/>
-                    <p className="font-bold text-blue-600 text-2xl">FACUSSA ELECTIONS</p>     
+                    <School  color="#2563EB" size={34}/>
+                    <p className="font-bold text-blue-600">FACUSSA ELECTIONS</p>     
                 </div>
 
                 <div onClick={() => setAcc(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
-                    <School2  color="#2563EB" size={54}/>
-                    <p className="font-bold text-blue-600 text-center text-2xl">ACCOUNTING ELECTIONS</p>   
+                    <School2  color="#2563EB" size={34}/>
+                    <p className="font-bold text-blue-600 text-center">ACCOUNTING ELECTIONS</p>   
                 </div>
 
                 <div onClick={() => setAltar(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
-                    <Church  color="#2563EB" size={54}/>
-                    <p className="font-bold text-blue-600 text-center text-2xl">ALTAR SERVERS ELECTIONS</p>   
+                    <Church  color="#2563EB" size={34}/>
+                    <p className="font-bold text-blue-600 text-center">ALTAR SERVERS ELECTIONS</p>   
                 </div>
             </div>
 
