@@ -39,6 +39,20 @@ function Election() {
         setPositions(updated);
     };
 
+    function handlePositionChange(e, posIndex) {
+        const updated = [...positions];
+        updated[posIndex].positionName = e.target.value;
+        setPositions(updated);
+    };
+
+    function handleCandidateChange(e, posIndex, candIndex) {
+        const updated = [...positions];
+        updated[posIndex].candidates[candIndex] = e.target.value;
+        setPositions(updated);
+    };
+
+
+
 
         
     return(
