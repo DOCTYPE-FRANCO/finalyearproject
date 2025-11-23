@@ -13,6 +13,14 @@ function Election() {
 
     });
 
+    const [positions, setPositions] = useState([
+        {
+            positionName: "",
+            candidates: [""]
+        }
+    ]);
+
+
     function handleChange(e){
         const {name, value} = e.target;
         setCreateForm(prev => ({
@@ -69,7 +77,7 @@ function Election() {
                                     name="electionTitle"
                                     value={createForm.electionTitle}
                                     onChange={handleChange}
-                                    className="w-[450px] h-[30px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    className="w-[300px] h-[25px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                 />
                             </label>
 
@@ -80,40 +88,87 @@ function Election() {
                                     name="electionTitle"
                                     value={createForm.electionTitle}
                                     onChange={handleChange}
-                                    className="rounded-md w-[350px] h-[30px]  text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    className="rounded-md w-[300px] h-[25px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                 />
 
-                                <div className="grid grid-cols-2 gap-2 w-[550px]">
+                                <div className="grid grid-cols-2 gap-1 w-[400px]">
                                     <input 
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
                                     <input 
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
                                     <input 
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
                                     <input 
                                         type="text"
                                         onChange={handleChange}
                                         placeholder="Candidates Name"
-                                        className="text-center w-[250px] h-[30px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
                                 </div>
                             </label>
                         </form>
+                        
+                        {positions.map((pos, posIndex) => (
+                            <div key={posIndex} className="border p-4 rounded-md mb-5">
+
+                                {/* Position Name */}
+                                <input
+                                    type="text"
+                                    placeholder="Position Name"
+                                    value={pos.positionName}
+                                    onChange={(e) => handlePositionChange(e, posIndex)}
+                                    className="w-[300px] h-[30px] mb-3 bg-white"
+                                />
+
+                                <div className="flex flex-col gap-2">
+                                    {pos.candidates.map((cand, candIndex) => (
+                                        <input
+                                            key={candIndex}
+                                            type="text"
+                                            placeholder="Candidate Name"
+                                            value={cand}
+                                            onChange={(e) => handleCandidateChange(e, posIndex, candIndex)}
+                                            className="w-[300px] h-[30px] bg-white"
+                                        />
+                                    ))}
+                                </div>
+
+                                {/* Add Candidate */}
+                                <button
+                                    type="button"
+                                    onClick={() => addCandidate(posIndex)}
+                                    className="mt-2 text-blue-600"
+                                >
+                                    + Add Candidate
+                                </button>
+
+                            </div>
+                        ))}
+
+                        {/* Add New Position */}
+                        <button
+                            type="button"
+                            onClick={addPosition}
+                            className="mt-4 text-green-600"
+                        >
+                            + Add Position
+                        </button>
+
                     </motion.div>
                 )}
             </AnimatePresence>
