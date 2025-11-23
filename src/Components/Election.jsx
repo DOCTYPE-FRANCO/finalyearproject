@@ -56,7 +56,7 @@ function Election() {
 
         
     return(
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center ">
             <p className="text-center font-extrabold text-blue-600 text-3xl mt-20">Create a New Election or Choose a Template</p>
             <div className="grid md:grid-cols-2 gap-10 pt-16">
                 <div onClick={() => setCreate(true)} className="hover:scale-105 transition-all duration-300 flex flex-col gap-5 justify-center items-center w-[330px] h-[150px] shadow-gray-400 shadow-2xl rounded-md">
@@ -88,7 +88,7 @@ function Election() {
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.4}}
                         exit={{opacity: 0, y: 75}}
-                        className="fixed top-20 rounded-md w-[80vw] h-[80vh] bg-blue-600/20 backdrop-blur-sm"
+                        className="absolute top-20 rounded-md w-[80vw] min-h-[80vh] bg-blue-600/20 backdrop-blur-sm "
                     >
                         <div className="flex  justify-between px-5 pt-1 pb-5">
                             <p className="text-2xl font-extrabold">CREATE ELECTION</p>
@@ -96,95 +96,55 @@ function Election() {
                         </div>
 
                         <form className="px-5 flex flex-col gap-3">
-                            <label className="flex flex-col gap-2 ">
+                            <label className="flex flex-col gap-2 text-2xl ">
                                 Election Title
                                 <input 
                                     type="text"
                                     name="electionTitle"
                                     value={createForm.electionTitle}
                                     onChange={handleChange}
-                                    className="w-[300px] h-[25px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    className="w-[350px] h-[35px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                 />
                             </label>
 
-                            <label className="flex flex-col gap-2">
-                                Position
-                                <input 
-                                    type="text"
-                                    name="electionTitle"
-                                    value={createForm.electionTitle}
-                                    onChange={handleChange}
-                                    className="rounded-md w-[300px] h-[25px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
-                                />
-
-                                <div className="grid grid-cols-2 gap-1 w-[400px]">
-                                    <input 
-                                        type="text"
-                                        onChange={handleChange}
-                                        placeholder="Candidates Name"
-                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
-                                    />
-
-                                    <input 
-                                        type="text"
-                                        onChange={handleChange}
-                                        placeholder="Candidates Name"
-                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
-                                    />
-
-                                    <input 
-                                        type="text"
-                                        onChange={handleChange}
-                                        placeholder="Candidates Name"
-                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
-                                    />
-
-                                    <input 
-                                        type="text"
-                                        onChange={handleChange}
-                                        placeholder="Candidates Name"
-                                        className="text-center w-[200px] h-[25px] font-thin text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
-                                    />
-                                </div>
-                            </label>
                         </form>
 
-                        {positions.map((pos, posIndex) => (
-                            <div key={posIndex} className="border p-4 rounded-md mb-5">
+                        <div className="grid grid-cols-2">
+                            {positions.map((pos, posIndex) => (
+                                <div key={posIndex} className="p-4 rounded-md mb-5">
+                                    <input
+                                        type="text"
+                                        placeholder="Position Name"
+                                        value={pos.positionName}
+                                        onChange={(e) => handlePositionChange(e, posIndex)}
+                                        className="w-[300px] h-[30px] mb-3 bg-white text-center focus:outline-none focus:ring-0 focus:border-transparent"
+                                    />
 
-                                {/* Position Name */}
-                                <input
-                                    type="text"
-                                    placeholder="Position Name"
-                                    value={pos.positionName}
-                                    onChange={(e) => handlePositionChange(e, posIndex)}
-                                    className="w-[300px] h-[30px] mb-3 bg-white"
-                                />
+                                    <div className="grid grid-cols-2 gap-2 w-[400px]">
+                                        {pos.candidates.map((cand, candIndex) => (
+                                            <input
+                                                key={candIndex}
+                                                type="text"
+                                                placeholder="Candidate Name"
+                                                value={cand}
+                                                onChange={(e) => handleCandidateChange(e, posIndex, candIndex)}
+                                                className="w-[170px] h-[30px] bg-white text-center focus:outline-none focus:ring-0 focus:border-transparent"
+                                            />
+                                        ))}
+                                    </div>
 
-                                <div className="flex flex-col gap-2">
-                                    {pos.candidates.map((cand, candIndex) => (
-                                        <input
-                                            key={candIndex}
-                                            type="text"
-                                            placeholder="Candidate Name"
-                                            value={cand}
-                                            onChange={(e) => handleCandidateChange(e, posIndex, candIndex)}
-                                            className="w-[300px] h-[30px] bg-white"
-                                        />
-                                    ))}
+                                    {/* Add Candidate */}
+                                    <button
+                                        type="button"
+                                        onClick={() => addCandidate(posIndex)}
+                                        className="mt-2 text-blue-600"
+                                    >
+                                        + Add Candidate
+                                    </button>
+
                                 </div>
-
-                                {/* Add Candidate */}
-                                <button
-                                    type="button"
-                                    onClick={() => addCandidate(posIndex)}
-                                    className="mt-2 text-blue-600"
-                                >
-                                    + Add Candidate
-                                </button>
-
-                            </div>
-                        ))}
+                            ))}
+                        </div>
 
                         {/* Add New Position */}
                         <button
