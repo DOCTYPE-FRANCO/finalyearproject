@@ -146,14 +146,23 @@ function Election() {
                             ))}
                         </div>
 
-                        {/* Add New Position */}
-                        <button
-                            type="button"
-                            onClick={addPosition}
-                            className="mt-4 text-green-600"
-                        >
-                            + Add Position
-                        </button>
+                        
+                       <div className="flex justify-between px-5 mt-4">
+                            <button
+                                type="button"
+                                onClick={addPosition}
+                                className=" text-green-600"
+                            >
+                                + Add Position
+                            </button>
+
+                            <button
+                                type="button"
+                                className="w-[120px] h-[35px] bg-blue-500 text-white rounded-md font-bold hover:scale-110 hover:cursor-pointer transition-all duration-300"
+                            >
+                                CREATE
+                            </button>   
+                       </div>
 
                     </motion.div>
                 )}
