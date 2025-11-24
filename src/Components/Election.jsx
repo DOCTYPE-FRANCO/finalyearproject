@@ -88,28 +88,28 @@ function Election() {
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.4}}
                         exit={{opacity: 0, y: 75}}
-                        className="absolute top-20 rounded-md w-[80vw] min-h-[80vh] bg-blue-600/20 backdrop-blur-sm "
+                        className=" absolute top-20 rounded-md w-[80vw] min-h-[80vh] bg-blue-600/20 backdrop-blur-sm "
                     >
-                        <div className="flex  justify-between px-5 pt-1 pb-5">
+                        <div className="flex  justify-between px-5 pt-2 pb-5">
                             <p className="text-2xl font-extrabold">CREATE ELECTION</p>
                             <X onClick={() => setCreate(false)}/>
                         </div>
 
                         <form className="px-5 flex flex-col gap-3">
-                            <label className="flex flex-col gap-2 text-2xl mb-10">
+                            <label className="flex flex-col gap-2 font-bold mb-10">
                                 Election Title
                                 <input 
                                     type="text"
                                     name="electionTitle"
                                     value={createForm.electionTitle}
                                     onChange={handleChange}
-                                    className="w-[350px] h-[35px] text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
+                                    className="pl-5 w-[350px] h-[35px] font-semibold text-sm bg-white focus:outline-none focus:ring-0 focus:border-transparent"
                                 />
                             </label>
 
                         </form>
 
-                        <div className="grid grid-cols-2">
+                        <div className="grid grid-cols-2 mx-auto">
                             {positions.map((pos, posIndex) => (
                                 <div key={posIndex} className="p-4 rounded-md mb-5">
                                     <input
