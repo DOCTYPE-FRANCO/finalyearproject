@@ -116,6 +116,18 @@ function Election() {
         setAccPositions(updated);
     };
 
+    function handleAccPositionChange(e, posIndex) {
+        const updated = [...positions];
+        updated[posIndex].positionName = e.target.value;
+        setPositions(updated);
+    };
+
+    function handleAccCandidateChange(e, posIndex, candIndex) {
+        const updated = [...positions];
+        updated[posIndex].candidates[candIndex] = e.target.value;
+        setPositions(updated);
+    };
+
     
 
 
