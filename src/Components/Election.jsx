@@ -269,7 +269,7 @@ function Election() {
                                         type="text"
                                         placeholder="Position Name"
                                         value={pos.positionName}
-                                        onChange={(e) => handlePositionChange(e, posIndex)}
+                                        onChange={(e) => handleAccPositionChange(e, posIndex)}
                                         className="font-bold ml-10 w-[300px] h-[30px] mb-3 bg-white text-center focus:outline-none focus:ring-0 focus:border-transparent"
                                     />
 
@@ -280,7 +280,7 @@ function Election() {
                                                 type="text"
                                                 placeholder="Candidate Name"
                                                 value={cand}
-                                                onChange={(e) => handleCandidateChange(e, posIndex, candIndex)}
+                                                onChange={(e) => handleAccCandidateChange(e, posIndex, candIndex)}
                                                 className="w-[170px] h-[30px] bg-white text-center focus:outline-none focus:ring-0 focus:border-transparent"
                                             />
                                         ))}
