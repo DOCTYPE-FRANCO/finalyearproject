@@ -117,15 +117,15 @@ function Election() {
     };
 
     function handleAccPositionChange(e, posIndex) {
-        const updated = [...positions];
+        const updated = [...accPositions];
         updated[posIndex].positionName = e.target.value;
-        setPositions(updated);
+        setAccPositions(updated);
     };
 
     function handleAccCandidateChange(e, posIndex, candIndex) {
-        const updated = [...positions];
+        const updated = [...accPositions];
         updated[posIndex].candidates[candIndex] = e.target.value;
-        setPositions(updated);
+        setAccPositions(updated);
     };
 
     
